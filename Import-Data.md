@@ -38,7 +38,8 @@ Data descriptions
 Wait times in Canada to receive emergency care have increased. These
 data were released by the Canadian Institute for Health Information
 (CIHI) and detail wait times by province, and age group, and stratified
-by whether patients were admitted or not admitted.
+by whether patients were admitted or not admitted. The data contains 32
+rows and 10 variables.
 
 Variables include:
 
@@ -129,7 +130,8 @@ sheet for more information/data you might like to use.
 There is significant variation across hospitals in what is charged for
 common services. This dataset provides charge data for the 100 most
 common inpatient services and 30 most common outpatient services for a
-set of hospitals in the United States.
+set of hospitals in the United States. The data contain 163,065 rows and
+12 columns.
 
 Variables included in this dataset:
 
@@ -200,7 +202,8 @@ These data come from the World Population Prospects, 2015 revision. The
 datasets (one for males, one for females) contain the life expectancy at
 birth, by country, and specified world regions, from 1950 to 2015 for
 every five-year period of time. These datasets are included as part of
-the `wpp2015` package that you can install to gain access.
+the `wpp2015` package that you can install to gain access. Each dataset
+conains 241 rows and 16 columns.
 
 To use these data, run the following lines of code:
 
@@ -224,7 +227,8 @@ traffic stop conducted by a police officer in the state of Vermont
 between 2010 and 2015. It contains one row per traffic stop. Depending
 on what you would like to visualize, you may want to aggregate these
 data by time, space, or a clustering variable before visualization. Let
-us know if we can help you with pre-processing your data.
+us know if we can help you with pre-processing your data. The data
+contain 283,285 rows and 23 columns.
 
 Variables included:
 
@@ -265,7 +269,7 @@ To use these data, run the following lines of code:
 **5. Worldwide Key Development Indicators, 2012 (Economics - beginner)**
 
 This dataset contains key development indicators by country, as
-collected by the World Bank.
+collected by the World Bank. The data contain 133 rows and 13 columns.
 
 Variables include:
 
@@ -532,7 +536,8 @@ Command+Enter on a Mac or Ctrl+Enter on Windows/Linux:
 advanced)** These data were originally derived from the the inquiry
 database of the International Labour Organization (ILO). The data is
 calibrated into a normalized wage rate for each occupation, either
-hourly or monthly, for adult workers.
+hourly or monthly, for adult workers. The data contain 125,018 rows and
+37 columns.
 
 Variables included:
 
