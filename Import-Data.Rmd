@@ -1,7 +1,8 @@
 ---
-title: "PopDataViz2017 Hackathon Datasets"
 output: md_document
 ---
+
+##PopDataViz2017 Hackathon Datasets
 
 Please feel free to use your own data for the hackathon, or one of the six described below. We have provided six datasets, three suitable for beginners, and 3 suitable for more advanced users. They're organized below by topic area. Some of these datasets are quite large, so we recommend you only download the dataset you are interested in using. To easily download your dataset of choice, first setup an RStudio Project:
 
