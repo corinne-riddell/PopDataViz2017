@@ -219,16 +219,18 @@ required, it all depends on what you hope to visualize! If you find
 other information you'd like to add in, we can help you merge it to
 these data if you need advice.
 
-**4. Police traffic stop data for Vermont, 2010-2015
+**4. Police traffic stop data for Vermont and Florida,
 (demography/sociology - advanced)**
 
-This dataset came from the Stanford Policing Project. It contains every
-traffic stop conducted by a police officer in the state of Vermont
-between 2010 and 2015. It contains one row per traffic stop. Depending
-on what you would like to visualize, you may want to aggregate these
-data by time, space, or a clustering variable before visualization. Let
-us know if we can help you with pre-processing your data. The data
-contain 283,285 rows and 23 columns.
+These datasets came from the Stanford Policing Project. They contain
+every traffic stop conducted by a police officer in the state of Vermont
+between 2010 and 2015 and the state of Florida between 2010 and October
+2016. There is one row per traffic stop. Depending on what you would
+like to visualize, you may want to aggregate these data by time, space,
+or a clustering variable before visualization. Let us know if we can
+help you with pre-processing your data. The Vermont dataset contains
+283,285 rows and 23 columns, while the Florida dataset contains
+5,421,446 rows and 28 columns
 
 Variables included:
 
@@ -236,32 +238,43 @@ Variables included:
 -   `state`: The state abbreviation. -`stop_date`: In the format
     YYYY-MM-DD, denoting the date the stop was conducted.
 -   `stop_time`: Time of the stop in 24-hr format.
--   `location_raw`: The location of the stop, as recorded by the
-    police department.
+-   `location_raw`: The location of the stop, as recorded by the state..
 -   `county_name`: The county where the stop took place.
 -   `count_fips`: A numeric ID for the county.
 -   `fine_grained_location`: Inconsistenly coded and formatted, but more
     granular detail about the stop location.
 -   `police department`: The policy department of the officer who
     conducted the stop.
+-   `driver_age_raw`: The driver's age as coded in Florida (Florida
+    only; no data in Vermont on age).
+-   `driver_age`: The driver's age as recoded by the Stanford
+    Policing Project. (No data in Vermont on age)
 -   `driver_gender`: The gender of the driver.
--   `violation_raw`: The violation as coded by Vermont.
+-   `drivre_race_raw`: Race as coded by the state.
+-   `drivre_race`: Race as recoded by the Stanford Policing Project.
+-   `violation_raw`: The violation as coded by the state.
 -   `violation`: The violation as coded by the Stanford Policing Project
     (to make consistent across states).
 -   `search_conducted`: TRUE/FALSE indicator for whether the car
     was searched.
--   `search_type_raw`: Search variable originally provided by Vermont.
+-   `search_type_raw`: Search variable originally provided by the state.
 -   `contraband_found`: Indicator for whether the search
-    yielded contraband.
+    yielded contraband. (No data from Florida)
 -   `stop_outcome`: Categorical indicator for whether the stopped
     individual was given a warning, a citation, or was arrested.
 -   `is_arrested`: TRUE/FALSE indicator for whether an arrest was made.
 -   `officer_id`: Identifier variable to cluster stops for each officer.
+-   Additional officer characteristics coded for Florida:
+    `officer_gender`, `officer_age`, `officer_race`, `officer_rank`
+-   `out_of_state`: Whether the driver was from out of state.
 
-To use these data, run the following lines of code:
+To use these data, run the following lines of code. You can use either
+dataset, or both, depending on what you'd like to visualize:
 
     VT.data <- gzfile("./Data/VT-clean.csv.gz")
     VT.stops <- read.csv(VT.data, stringsAsFactors=FALSE, header=T, nrows=1300000) #takes 20 seconds
+
+    FL.data <- readRDS("./Data/FL_clean.rds")
 
 -   Data downloaded from <https://openpolicing.stanford.edu/data/>, see
     the download link for Vermont.
